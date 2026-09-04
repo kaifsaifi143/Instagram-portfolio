@@ -1,0 +1,1023 @@
+/* =========================================
+   BASIC RESET
+   ========================================= */
+
+/* 
+   * selector sabhi HTML elements ko select karta hai.
+   box-sizing: border-box se width/height calculate
+   karna easy ho jata hai.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Smooth scrolling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fafafa;
+    color: #262626;
+}
+
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.navbar {
+
+    height: 65px;
+
+    background: white;
+
+    border-bottom: 1px solid #dbdbdb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.logo {
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    color: #262626;
+}
+
+
+.navbar nav {
+
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.navbar nav a {
+
+    text-decoration: none;
+
+    color: #262626;
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+
+.navbar nav a:hover {
+
+    color: #0095f6;
+}
+
+
+.theme-btn {
+
+    border: none;
+
+    background: #efefef;
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+main {
+
+    width: min(1000px, 92%);
+
+    margin: auto;
+}
+
+
+/* =========================================
+   PROFILE
+   ========================================= */
+
+.profile {
+
+    display: flex;
+
+    gap: 70px;
+
+    padding: 50px 5%;
+
+    border-bottom: 1px solid #dbdbdb;
+}
+
+
+.profile-image {
+
+    min-width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center; 
+    border: 5px solid black;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  
+}
+
+.profile-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.profile-details {
+
+    flex: 1;
+}
+
+
+.username {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+.username h1 {
+
+    font-size: 28px;
+
+    font-weight: 400;
+
+    margin-right: 15px;
+}
+
+
+.follow-btn,
+.message-btn {
+
+    border: none;
+
+    padding: 9px 20px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.follow-btn {
+
+    background: #0095f6;
+
+    color: white;
+}
+
+
+.follow-btn.following {
+
+    background: #efefef;
+
+    color: #262626;
+}
+
+
+.message-btn {
+
+    background: #efefef;
+
+    color: #262626;
+}
+
+
+/* =========================================
+   STATS
+   ========================================= */
+
+.stats {
+
+    display: flex;
+
+    gap: 35px;
+
+    margin: 25px 0;
+}
+
+
+.stats div {
+
+    display: flex;
+
+    gap: 5px;
+}
+
+
+.stats strong {
+
+    font-size: 15px;
+}
+
+
+.stats span {
+
+    color: #555;
+}
+
+
+.bio {
+
+    line-height: 1.5;
+}
+
+
+.bio p {
+
+    margin-top: 3px;
+}
+
+
+.hashtags {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: #00376b;
+}
+
+
+/* =========================================
+   HIGHLIGHTS
+   ========================================= */
+
+.highlights {
+
+    display: flex;
+
+    gap: 30px;
+
+    padding: 25px 5%;
+
+    border-bottom: 1px solid #dbdbdb;
+}
+
+
+.highlight {
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+.highlight-circle {
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 50%;
+
+    border: 1px solid #ccc;
+
+    background: white;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 27px;
+
+    margin-bottom: 7px;
+}
+
+
+/* =========================================
+   PROJECT SECTION
+   ========================================= */
+
+.projects-section {
+
+    padding: 40px 0;
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.section-heading h2 {
+
+    font-size: 25px;
+}
+
+
+#projectFilter {
+
+    padding: 9px 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 7px;
+
+    background: white;
+}
+
+
+/* =========================================
+   PROJECT GRID
+   ========================================= */
+
+/*
+   CSS Grid:
+   repeat(3, 1fr) ka matlab 3 equal columns.
+*/
+
+.project-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   PROJECT CARD
+   ========================================= */
+
+.project-card {
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+
+.project-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.10);
+}
+
+
+/* JavaScript is class "hidden" ko add karega */
+
+.project-card.hidden {
+
+    display: none;
+}
+
+
+/* =========================================
+   PROJECT IMAGE
+   ========================================= */
+
+.project-image {
+
+    height: 190px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: white;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.image-one {
+
+    background:
+        linear-gradient(
+            135deg,
+            #667eea,
+            #764ba2
+        );
+}
+
+
+.image-two {
+
+    background:
+        linear-gradient(
+            135deg,
+            #11998e,
+            #38ef7d
+        );
+}
+
+
+.image-three {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ee0979,
+            #ff6a00
+        );
+}
+
+
+.image-four {
+
+    background:
+        linear-gradient(
+            135deg,
+            #4568dc,
+            #b06ab3
+        );
+}
+
+
+.image-five {
+
+    background:
+        linear-gradient(
+            135deg,
+            #232526,
+            #414345
+        );
+}
+
+
+.image-six {
+
+    background:
+        linear-gradient(
+            135deg,
+            #00c6ff,
+            #0072ff
+        );
+}
+
+
+/* =========================================
+   PROJECT CONTENT
+   ========================================= */
+
+.project-content {
+
+    padding: 17px;
+
+    position: relative;
+}
+
+
+.project-content h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+
+.project-content p {
+
+    color: #666;
+
+    line-height: 1.5;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   TAGS
+   ========================================= */
+
+.tags {
+
+    display: flex;
+
+    gap: 6px;
+
+    flex-wrap: wrap;
+}
+
+
+.tags span {
+
+    background: #efefef;
+
+    padding: 5px 8px;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   LIKE BUTTON
+   ========================================= */
+
+.likeBtn {
+
+    position: absolute;
+
+    right: 15px;
+
+    bottom: 15px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+.likeBtn.liked {
+
+    color: #ed4956;
+}
+
+
+/* =========================================
+   ABOUT
+   ========================================= */
+
+.about {
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    padding: 35px;
+
+    margin-bottom: 50px;
+}
+
+
+.about h2 {
+
+    margin-bottom: 12px;
+}
+
+
+.about > p {
+
+    color: #666;
+
+    line-height: 1.7;
+
+    max-width: 700px;
+}
+
+
+/* =========================================
+   SKILLS
+   ========================================= */
+
+.skills {
+
+    max-width: 600px;
+
+    margin-top: 25px;
+}
+
+
+.skill {
+
+    margin-bottom: 17px;
+}
+
+
+.skill-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+
+.progress {
+
+    height: 8px;
+
+    background: #e5e5e5;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+.progress div {
+
+    height: 100%;
+
+    background: #262626;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================
+   MODAL
+   ========================================= */
+
+/*
+   Modal screen ke upar popup create karta hai.
+*/
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.55);
+
+    display: none;
+
+    place-items: center;
+
+    z-index: 200;
+
+    padding: 20px;
+}
+
+
+/*
+   JavaScript "show" class add karega,
+   tab modal visible hoga.
+*/
+
+.modal.show {
+
+    display: grid;
+}
+
+
+.modal-box {
+
+    width: min(430px, 100%);
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 30px;
+
+    position: relative;
+}
+
+
+.close {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 10px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+.modal-box input,
+.modal-box textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 7px;
+
+    outline: none;
+}
+
+
+.modal-box textarea {
+
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+
+.send-btn {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 15px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #0095f6;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+#result {
+
+    text-align: center;
+
+    margin-top: 12px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   DARK MODE
+   ========================================= */
+
+body.dark {
+
+    background: #121212;
+
+    color: #f5f5f5;
+}
+
+
+body.dark .navbar,
+body.dark .project-card,
+body.dark .about,
+body.dark .modal-box {
+
+    background: #1e1e1e;
+
+    color: #f5f5f5;
+}
+
+
+body.dark .navbar nav a {
+
+    color: #f5f5f5;
+}
+
+
+body.dark .project-content p,
+body.dark .about > p,
+body.dark .stats span {
+
+    color: #bbb;
+}
+
+
+body.dark .tags span,
+body.dark .message-btn,
+body.dark .theme-btn {
+
+    background: #333;
+
+    color: white;
+}
+
+
+body.dark .highlight-circle {
+
+    background: #1e1e1e;
+
+    border-color: #444;
+}
+
+
+body.dark #projectFilter {
+
+    background: #1e1e1e;
+
+    color: white;
+
+    border-color: #555;
+}
+
+
+body.dark .about,
+body.dark .project-card,
+body.dark .navbar {
+
+    border-color: #444;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/*
+   @media query screen ki width check karti hai.
+   Mobile screen par layout change ho jayega.
+*/
+
+@media (max-width: 750px) {
+
+    .navbar {
+
+        padding: 0 4%;
+    }
+
+
+    .navbar nav {
+
+        gap: 12px;
+    }
+
+
+    .navbar nav a {
+
+        font-size: 13px;
+    }
+
+
+    .profile {
+
+        gap: 25px;
+
+        padding: 35px 0;
+    }
+
+
+    .profile-image {
+
+        min-width: 100px;
+
+        width: 100px;
+
+        height: 100px;
+
+        font-size: 40px;
+    }
+
+
+    .username h1 {
+
+        width: 100%;
+
+        font-size: 22px;
+    }
+
+
+    .stats {
+
+        gap: 15px;
+
+        font-size: 13px;
+    }
+
+
+    .project-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar nav {
+
+        display: none;
+    }
+
+
+    .profile {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    .username {
+
+        justify-content: center;
+    }
+
+
+    .stats {
+
+        justify-content: center;
+    }
+
+
+    .highlights {
+
+        overflow-x: auto;
+    }
+
+
+    .section-heading {
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+        flex-direction: column;
+    }
+
+}

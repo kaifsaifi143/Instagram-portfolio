@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Website ko mobile-friendly banata hai -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kaif | Developer Portfolio</title>
+
+    <!-- CSS file ko HTML ke saath connect kar raha hai -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Kaif_Profile
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button id="themeBtn" class="theme-btn">
+            🌙
+        </button>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="home">
+
+        <!-- PROFILE SECTION -->
+
+        <section class="profile">
+
+            <div class="profile-image">
+                <img class="images" src="kaif.jpg" alt="kaif">
+            </div>
+
+            <div class="profile-details">
+
+                <div class="username">
+                    <h1>kaif_saifi_143</h1>
+
+                    <button id="followBtn" class="follow-btn">
+                        Follow
+                    </button>
+
+                    <button id="messageBtn" class="message-btn">
+                        Message
+                    </button>
+                </div>
+
+
+                <!-- Profile statistics -->
+
+                <div class="stats">
+
+                    <div>
+                        <strong>6</strong>
+                        <span>Projects</span>
+                    </div>
+
+                    <div>
+                        <strong>1.2K</strong>
+                        <span>Followers</span>
+                    </div>
+
+                    <div>
+                        <strong>180</strong>
+                        <span>Following</span>
+                    </div>
+
+                </div>
+
+
+                <div class="bio">
+
+                    <strong>Kaif</strong>
+
+                    <p>Full Stack Developer 💻</p>
+
+                    <p>
+                        HTML • CSS • JavaScript • Java 
+                    </p>
+
+                    <p>
+                        Learning by building real projects.
+                    </p>
+
+                    <span class="hashtags">
+                        #webdevelopment #frontend #javascript
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HIGHLIGHTS ================= -->
+
+        <section class="highlights">
+
+            <div class="highlight">
+                <div class="highlight-circle">💻</div>
+                <span>Projects</span>
+            </div>
+
+            <div class="highlight">
+                <div class="highlight-circle">🎨</div>
+                <span>Design</span>
+            </div>
+
+            <div class="highlight">
+                <div class="highlight-circle">⚡</div>
+                <span>Skills</span>
+            </div>
+
+            <div class="highlight">
+                <div class="highlight-circle">📚</div>
+                <span>Learning</span>
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECT SECTION ================= -->
+
+        <section id="projects" class="projects-section">
+
+            <div class="section-heading">
+
+                <h2>My Projects</h2>
+
+                <!-- JavaScript is used to filter projects -->
+                <select id="projectFilter">
+
+                    <option value="all">
+                        All Projects
+                    </option>
+
+                    <option value="html">
+                        HTML
+                    </option>
+
+                    <option value="css">
+                        CSS
+                    </option>
+
+                    <option value="javascript">
+                        JavaScript
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- PROJECT GRID -->
+
+            <div class="project-grid">
+
+
+                <!-- PROJECT 1 -->
+
+                <!-- data-category ek custom HTML data attribute hai.
+                     JavaScript is value ko read karke filtering karega. -->
+
+                <article class="project-card"
+                    data-category="html">
+
+                    <div class="project-image image-one">
+                        HTML PROJECT
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>HTML Portfolio</h3>
+
+                        <p>
+                            A clean portfolio website created using
+                            semantic HTML elements.
+                        </p>
+
+                        <div class="tags">
+                            <span>HTML</span>
+                            <span>Semantic HTML</span>
+                        </div>
+
+                        <button class="likeBtn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 2 -->
+
+                <article class="project-card"
+                    data-category="css">
+
+                    <div class="project-image image-two">
+                        CSS PROJECT
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Responsive Website</h3>
+
+                        <p>
+                            Responsive website created using CSS
+                            Grid, Flexbox and Media Queries.
+                        </p>
+
+                        <div class="tags">
+                            <span>CSS</span>
+                            <span>Flexbox</span>
+                            <span>Grid</span>
+                        </div>
+
+                        <button class="likeBtn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 3 -->
+
+                <article class="project-card"
+                    data-category="javascript">
+
+                    <div class="project-image image-three">
+                        TODO APP
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Todo Application</h3>
+
+                        <p>
+                            Simple Todo application using JavaScript
+                            DOM manipulation.
+                        </p>
+
+                        <div class="tags">
+                            <span>JavaScript</span>
+                            <span>DOM</span>
+                        </div>
+
+                        <button class="likeBtn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 4 -->
+
+                <article class="project-card"
+                    data-category="javascript">
+
+                    <div class="project-image image-four">
+                        CALCULATOR
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Calculator</h3>
+
+                        <p>
+                            Basic calculator using JavaScript
+                            functions and events.
+                        </p>
+
+                        <div class="tags">
+                            <span>JavaScript</span>
+                            <span>Functions</span>
+                        </div>
+
+                        <button class="likeBtn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 5 -->
+
+                <article class="project-card"
+                    data-category="css">
+
+                    <div class="project-image image-five">
+                        PRODUCT UI
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Product Card UI</h3>
+
+                        <p>
+                            Modern product card designed with
+                            CSS hover effects.
+                        </p>
+
+                        <div class="tags">
+                            <span>CSS</span>
+                            <span>UI Design</span>
+                        </div>
+
+                        <button class="likeBtn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 6 -->
+
+                <article class="project-card"
+                    data-category="javascript">
+
+                    <div class="project-image image-six">
+                        DIGITAL CLOCK
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Digital Clock</h3>
+
+                        <p>
+                            Live digital clock created using
+                            JavaScript Date object.
+                        </p>
+
+                        <div class="tags">
+                            <span>JavaScript</span>
+                            <span>Date</span>
+                        </div>
+
+                        <button class="likeBtn">
+                            ♡
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about" class="about">
+
+            <h2>About Me</h2>
+
+            <p>
+                I am a beginner frontend developer currently
+                learning HTML, CSS and JavaScript.
+                I enjoy creating responsive and user-friendly
+                websites.
+            </p>
+
+
+            <div class="skills">
+
+                <div class="skill">
+
+                    <div class="skill-title">
+                        <span>HTML</span>
+                        <span>90%</span>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width: 90%;"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-title">
+                        <span>CSS</span>
+                        <span>85%</span>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width: 85%;"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-title">
+                        <span>JavaScript</span>
+                        <span>70%</span>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width: 70%;"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= MESSAGE MODAL ================= -->
+
+    <!-- Modal ek popup box hota hai jo JavaScript se open/close hota hai. -->
+
+    <div id="messageModal" class="modal">
+
+        <div class="modal-box">
+
+            <button id="closeModal" class="close">
+                ×
+            </button>
+
+            <h2>Send Message</h2>
+
+            <input
+                type="text"
+                id="nameInput"
+                placeholder="Your Name"
+            >
+
+            <textarea
+                id="messageInput"
+                placeholder="Write your message..."
+            ></textarea>
+
+            <button id="sendBtn" class="send-btn">
+                Send
+            </button>
+
+            <p id="result"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Kaif.dev | Built with HTML, CSS & JavaScript
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript file ko HTML se connect kar raha hai -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
